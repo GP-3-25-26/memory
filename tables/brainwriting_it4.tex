@@ -1,0 +1,65 @@
+\renewcommand{\arraystretch}{1.15}
+\setlength{\arrayrulewidth}{1.3pt}
+
+\begin{landscape}
+\centering
+
+\begin{tabular}{|
+    >{\centering\arraybackslash}m{2.2cm}|
+    >{\arraybackslash}m{7cm}|
+    >{\arraybackslash}m{7cm}|
+    >{\arraybackslash}m{7cm}|
+}
+\hline
+\rowcolor{lightgray}
+\multicolumn{4}{|c|}{\textbf{Brainwriting (Iteración 4)}} \\
+\hline
+\rowcolor{lightgray}
+\textbf{Miembro} & \textbf{Idea 1} & \textbf{Idea 2} & \textbf{Idea 3} \\
+\hline
+
+\cellcolor{lightgray!30}
+\begin{center}
+\textbf{Daniel}\\
+{\footnotesize (revisado por Nicolás, Jaime, Francisco)}
+\end{center} &
+Módulo integrado en Odoo que permite analizar \texttt{FASTQ} y el historial clínico del paciente para predecir la probabilidad de desarrollar enfermedades genéticas como apoyo a la decisión del genetista. &
+Modelo basado en LLM y agentes autónomos que, a partir de variantes y del historial clínico, predice enfermedades proporcionando un porcentaje de probabilidad y una explicación del resultado. &
+Aplicación web que clasifica automáticamente variantes genéticas y ofrece un buscador avanzado para localizarlas según el historial clínico del paciente. \\
+\hline
+
+\cellcolor{lightgray!30}
+\begin{center}
+\textbf{Francisco}\\
+{\footnotesize (revisado por Daniel, Nicolás, Jaime)}
+\end{center} &
+Aplicación web para la subida y procesamiento automático de archivos \texttt{FASTQ} e historiales médicos, detectando variantes genéticas y almacenándolas en un historial para su trazabilidad y reutilización. &
+Servicio basado en una API GraphQL que consulta de forma unificada diversas fuentes de datos médicas y el historial clínico del paciente para clasificar variantes y asociarlas con patologías relevantes. &
+Entrenamiento de un modelo predictivo que utiliza variantes seleccionadas por el genetista y datos clínicos del paciente, mostrando una predicción explicada en una interfaz visual basada en un archivo HTML. \\
+\hline
+
+\cellcolor{lightgray!30}
+\begin{center}
+\textbf{Jaime}\\
+{\footnotesize (revisado por Francisco, Daniel, Nicolás)}
+\end{center} &
+Análisis automático de \texttt{FASTQ} para detectar variantes sin intervención manual, permitiendo la selección manual de variantes de interés y la búsqueda opcional de enfermedades asociadas en historiales médicos. &
+Predicción enfermedades hereditarias y no hereditarias usando \textit{Machine Learning}, integrando variantes y datos clínicos del paciente para ofrecer un porcentaje de probabilidad basado en el aprendizaje del modelo. &
+Integración historial clínico y familiar en la predicción de enfermedades, aportando información sobre la posible raíz de la enfermedad, recomendando pruebas adicionales y ofreciendo explicabilidad. \\
+\hline
+
+\cellcolor{lightgray!30}
+\begin{center}
+\textbf{Nicolás}\\
+{\footnotesize (revisado por Jaime, Francisco, Daniel)}
+\end{center} &
+Modelo de análisis y predicción que utiliza variantes genéticas seleccionadas por el genetista y el historial clínico del paciente para ofrecer una predicción con porcentaje de probabilidad, gráficas explicativas y sugerencias de pruebas médicas. &
+Aplicación web que analiza diferencias genómicas, consulta APIs y bases de datos médicas y ofrece un resultado estructurado con sistema de feedback para el genetista, incluyendo la detección de variantes no registradas previamente. &
+Solución basada en dos scripts independientes para el análisis genético y la interpretación clínica, complementada con una interfaz web segura con gestión de permisos, donde los pacientes pueden consultar los resultados. \\
+\hline
+
+\end{tabular}
+
+\captionof{table}{Brainwriting (Iteración 4).}
+\label{tab:brainwriting_iter4}
+\end{landscape}

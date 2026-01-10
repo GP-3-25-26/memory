@@ -1,0 +1,134 @@
+\chapter{Fase 2: Definir}\label{cap:definir}
+
+En este capítulo se aborda la segunda fase de la metodología Design Thinking, la fase de \textbf{Definir}. El objetivo principal de esta fase es sintetizar la información recopilada durante la etapa de Empatía, identificar los aspectos clave del problema y delimitar con mayor precisión el reto a resolver.
+
+Para ello, se han aplicado distintas técnicas que permiten organizar la información obtenida, priorizar problemas y formular un punto de vista claro que sirva como base para la generación de soluciones en fases posteriores. En los siguientes apartados se describen las técnicas seleccionadas y su justificación, así como su aplicación práctica y los resultados obtenidos.
+
+\section{Técnicas utilizadas}
+
+En la fase de Definir se realizó una selección de técnicas orientadas a estructurar la información obtenida previamente y a perfilar de forma clara el problema a resolver. A continuación, se detallan las técnicas seleccionadas, así como aquellas que se descartaron:
+
+\begin{itemize}
+    \item \textbf{Mapa de experiencia de usuario.} Esta técnica no se aplica, ya que para su correcta realización sería necesario contar con contacto directo con los usuarios finales, situación que no se da en el contexto de este proyecto.
+    \item \textbf{Matriz 2x2.} Esta técnica se utiliza debido a que permite organizar y visualizar la información de manera clara, facilitando la identificación de perspectivas o elementos que requieren un análisis más profundo.
+    \item \textbf{Escalera Por qué - Cómo.} Se selecciona esta técnica porque la aplicación previa de los 5 por qués resultó especialmente útil para mejorar el mapa mental. Dado que la escalera Por qué--Cómo se apoya en un enfoque similar, se considera adecuada para perfilar los problemas a resolver.
+    \item \textbf{Marco de punto de vista.} Esta técnica se emplea como herramienta para verbalizar el diseño y el enfoque del problema en la etapa en la que se encuentra el proyecto.
+    \item \textbf{Infografía.} Se utiliza, al igual que en la fase anterior, para resumir los resultados obtenidos y condensar toda la información relevante en una única representación visual.
+\end{itemize}
+
+\section{Aplicación de las técnicas}
+
+Antes de aplicar las distintas técnicas de esta fase, se realizó un trabajo previo consistente en la generación de \textbf{post-its}. Para ello, se partió del mapa mental mejorado obtenido en la fase de Empatía, seleccionando los conceptos más relevantes y transformándolos en post-its.
+
+El criterio seguido fue el de crear un post-it por cada nodo considerado útil del mapa mental, entendiendo como útil aquel que aporta información para definir posibles soluciones al problema o que está relacionado con un subproblema a resolver. Estos post-its representan hallazgos que incluyen problemas subyacentes y que se traducirán en futuras tareas. Las técnicas se aplicaron en el mismo orden en el que aparecen en este documento.
+
+Durante la creación de los post-its se agruparon algunos conceptos del mapa mental y se descartaron otros. Por ejemplo, el post-it denominado \textit{Normalización y transformación de datos} agrupa los subconceptos \textit{Normalización de datos} y \textit{Transformación de datos} del mapa mental.
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=1\textwidth]{figures/definir/postits.jpg}
+    \caption{Definir: Post-its.}
+\end{figure}
+
+Los post-its creados fueron los siguientes:
+
+\begin{itemize}
+    \item Lectura de ficheros \texttt{FASTQ} de pacientes
+    \item Comparación con paciente perfecto
+    \item Prevención de errores
+    \item Análisis automático de los ficheros
+    \item Consulta del historial clínico
+    \item Normalización y transformación de datos
+    \item Detección de variantes genómicas
+    \item Consulta de información de sistemas externos
+    \newpage
+    \item Predicción y explicabilidad
+    \item Consulta de enfermedades hereditarias
+\end{itemize}
+
+\subsection{Matriz 2x2}
+
+Para la aplicación de la matriz 2x2 se seleccionaron dos métricas. La primera fue la \textbf{agilidad}, entendida como la rapidez con la que se realiza cada parte del proceso representado por los post-its. La segunda métrica fue la \textbf{probabilidad de error humano}, definida como la facilidad con la que un humano podría cometer errores al realizar cada tarea.
+
+Inicialmente se construyeron dos matrices: una \textit{matriz actual}, que describe el estado del proceso tal y como se realiza en la actualidad, y una \textit{matriz objetivo}, que representaría el proceso tras la aplicación de la solución propuesta. Finalmente, se decidió trabajar únicamente con la matriz actual, ya que en la matriz objetivo la mayoría de los post-its se situaban en el cuadrante deseado.
+
+A partir de esta observación, se definió un cuadrante objetivo dentro de la matriz actual y se centró el análisis en aquellas partes del proceso que no se encontraban en dicho cuadrante, así como en aquellas acciones que actualmente no se realizan. La matriz permitió representar de forma clara el estado de la situación y evidenciar qué aspectos deberían mejorarse.
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=1\textwidth]{figures/definir/matriz_2x2.jpg}
+    \caption{Definir: Matriz 2x2.}
+\end{figure}
+
+En particular, la detección de variantes, la comparación con el paciente perfecto y la predicción se identificaron como procesos lentos y manuales, con una alta probabilidad de error humano al depender en gran medida del genetista. Por el contrario, la lectura de los archivos \texttt{FASTQ}, la consulta del historial clínico y la consulta de enfermedades hereditarias se situaron en el cuadrante objetivo, al presentar menor probabilidad de error al tratarse principalmente de tareas de lectura o consulta de información.
+
+\subsection{Escalera Por qué - Cómo}
+
+Para la aplicación de la técnica de la escalera Por qué - Cómo se tomaron como referencia las diapositivas de la asignatura y las buenas prácticas recomendadas por la Universidad de Stanford \cite{stanford_dt_bootleg}.
+
+En un primer paso, se plantearon las siguientes preocupaciones de los usuarios:
+
+\begin{itemize}
+    \item Reducir el error humano a cero
+    \item Automatizar la detección y análisis de variantes
+    \item Automatizar la predicción de enfermedades basándose en las variantes detectadas y analizadas
+    \item Exponer por qué se ha predicho una determinada enfermedad
+    \item Incluir datos del perfil clínico y los antecedentes familiares del paciente en las predicciones
+\end{itemize}
+
+Posteriormente, se decidió eliminar la preocupación \textit{Automatizar la detección y análisis de variantes}, al considerarse totalmente dependiente de la automatización de la predicción, así como \textit{Exponer por qué se ha predicho esa enfermedad}, al entender que el genetista debe apoyarse en la predicción del sistema sin otorgarle una confianza ciega.
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=1\textwidth]{figures/definir/tres_escaleras.jpg}
+    \caption{Definir: Tres escaleras Por qué - Cómo.}
+\end{figure}
+
+Tras construir tres escaleras iniciales, se observó que todas convergían en un punto común: la necesidad de realizar una predicción. Esta técnica permitió ordenar las ideas y definir con mayor claridad qué debía abordarse. Dado que las respuestas al \textit{cómo} conducían a resultados similares e incompletos, se decidió construir una escalera unificada.
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=1\textwidth]{figures/definir/escalera_final.jpg}
+    \caption{Definir: Escalera Por qué - Cómo.}
+\end{figure}
+
+Se definieron dos escaleras que confluyen en un único resultado, cuyas bases son las necesidades principales de los usuarios: predecir enfermedades, reducir el error humano e incluir datos clínicos y familiares del paciente.
+
+\textbf{Escalera izquierda (por qué):} se desea predecir enfermedades, reducir el error humano e incluir datos clínicos y familiares porque se quiere leer los archivos \texttt{FASTQ} de los pacientes, analizarlos automáticamente, compararlos con el paciente perfecto, detectar variantes genómicas, analizarlas y predecir si el paciente presenta alguna enfermedad.
+
+\textbf{Escalera derecha (por qué):} se desea predecir enfermedades, reducir el error humano e incluir datos clínicos y familiares porque se quiere consultar información de sistemas externos, acceder al historial clínico personal y familiar del paciente, consultar información sobre enfermedades hereditarias y realizar una predicción sobre enfermedades futuras.
+
+Desde la perspectiva del \textit{cómo}, la explicación es equivalente pero en sentido inverso:
+
+\textbf{Escalera izquierda (cómo):} se predicen enfermedades detectando variantes genómicas mediante la comparación con el paciente perfecto, lo cual se realiza analizando automáticamente los archivos \texttt{FASTQ} tras su lectura.
+
+\textbf{Escalera derecha (cómo):} se predicen enfermedades consultando las enfermedades hereditarias del paciente, lo que se logra accediendo a sus historiales clínicos personales y familiares a través de sistemas externos.
+
+Unificando ambas escaleras, se concluye que la predicción de enfermedades se realiza mediante la detección de variantes genómicas en los archivos \texttt{FASTQ} del paciente y la consulta de su historial clínico y familiar.
+
+\subsection{Marco de punto de vista}
+
+En esta técnica se sintetizó toda la información recogida en las fases anteriores en cuatro oraciones, con el objetivo de definir claramente hacia dónde enfocar el problema a resolver y cómo abordar su solución:
+
+\begin{itemize}
+    \item \textit{Conocimos a} Leticia, que trabaja en G7, en el ámbito de la predicción de enfermedades mediante el estudio de datos genómicos de pacientes recogidos en archivos \texttt{FASTQ}.
+    \item \textit{Nos sorprendió que} el proceso se realiza actualmente de manera lenta y manual, siendo susceptible a errores humanos, y que además no se tiene en cuenta el historial clínico del paciente.
+    \item \textit{Nos preguntamos si} este proceso podría realizarse de forma automática, ayudando a los genetistas a ahorrar tiempo y a obtener mejores predicciones mediante el uso de técnicas de machine learning.
+    \item \textit{Sería rompedor} aportar una solución que integre información de distintos sistemas externos y del historial clínico del paciente, apoyando el escaneo de archivos y la predicción para ofrecer una conclusión clara sobre el estado del paciente.
+\end{itemize}
+
+\subsection{Infografía}
+
+Una vez aplicadas el resto de técnicas de esta fase, se volvió a hacer uso de \textbf{IA generativa} para resumir visualmente en una única viñeta todo lo concluido durante la fase de Definir. El resultado obtenido se presenta como la infografía representativa de esta etapa.
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=1\textwidth]{figures/definir/infografia.png}
+    \caption{Definir: Infografía.}
+\end{figure}
+

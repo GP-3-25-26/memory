@@ -1,0 +1,65 @@
+\renewcommand{\arraystretch}{1.15}
+\setlength{\arrayrulewidth}{1.3pt}
+
+\begin{landscape}
+\centering
+
+\begin{tabular}{|
+    >{\centering\arraybackslash}m{2.2cm}|
+    >{\arraybackslash}m{7cm}|
+    >{\arraybackslash}m{7cm}|
+    >{\arraybackslash}m{7cm}|
+}
+\hline
+\rowcolor{lightgray}
+\multicolumn{4}{|c|}{\textbf{Brainwriting (Iteración 2)}} \\
+\hline
+\rowcolor{lightgray}
+\textbf{Miembro} & \textbf{Idea 1} & \textbf{Idea 2} & \textbf{Idea 3} \\
+\hline
+
+\cellcolor{lightgray!30}
+\begin{center}
+\textbf{Daniel}\\
+{\footnotesize (revisado por Nicolás)}
+\end{center} &
+Módulo de Odoo que prediga enfermedades genéticas a partir de \texttt{FASTQ}, basándose en las diferencias detectadas entre el genoma del paciente y el de referencia. &
+LLM que, dado un archivo \texttt{FASTQ} y/o un historial clínico, detecte variantes y prediga enfermedades genéticas, aportando un porcentaje de predictibilidad y una explicación del proceso seguido. &
+Aplicación para clasificar variantes genéticas que incluya un buscador para localizar fácilmente las variantes de interés. \\
+\hline
+
+\cellcolor{lightgray!30}
+\begin{center}
+\textbf{Francisco}\\
+{\footnotesize (revisado por Daniel)}
+\end{center} &
+Procesamiento automático de archivos \texttt{FASTQ} e historiales médicos para encontrar variantes genéticas mediante una aplicación web que permita la subida de dichos archivos. &
+Consulta de diversas fuentes de datos a través de una API GraphQL para informar al genetista sobre las variantes detectadas y su clasificación (benignas o malignas) junto con las patologías asociadas. &
+Modelo predictivo que utilice como entrada variantes seleccionadas por el genetista y datos clínicos, a partir de un análisis automático del archivo \texttt{FASTQ}, mostrando una predicción explicada en la interfaz de usuario. \\
+\hline
+
+\cellcolor{lightgray!30}
+\begin{center}
+\textbf{Jaime}\\
+{\footnotesize (revisado por Francisco)}
+\end{center} &
+Análisis automático de archivos \texttt{FASTQ} para detectar variantes genómicas sin intervención manual, permitiendo al genetista seleccionar manualmente las variantes de interés y descartar las benignas. &
+Predicción de enfermedades mediante técnicas de \textit{Machine Learning} a partir de variantes genómicas y bases de datos médicas, integrando información del historial clínico del paciente. &
+Integración del historial clínico y familiar del paciente en la predicción de enfermedades, incluyendo explicabilidad del resultado para su valoración por parte del genetista. \\
+\hline
+
+\cellcolor{lightgray!30}
+\begin{center}
+\textbf{Nicolás}\\
+{\footnotesize (revisado por Jaime)}
+\end{center} &
+Modelo de análisis y predicción que, a partir de archivos genómicos del paciente y de referencia, devuelve la posible enfermedad, un porcentaje de probabilidad y gráficas explicativas que permiten al genetista comprender y validar el resultado. &
+Aplicación web que analiza automáticamente las principales diferencias entre el genoma del paciente y el de referencia y consulta distintas APIs y bases de datos médicas para asociar variantes con enfermedades. &
+Solución basada en dos scripts independientes: uno para el análisis genético y extracción de diferencias, y otro para la consulta de fuentes médicas que permita separar claramente el análisis genético de la interpretación clínica. \\
+\hline
+
+\end{tabular}
+
+\captionof{table}{Brainwriting (Iteración 2).}
+\label{tab:brainwriting_iter2}
+\end{landscape}

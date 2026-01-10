@@ -1,0 +1,49 @@
+\renewcommand{\arraystretch}{1.15}
+\setlength{\arrayrulewidth}{1.3pt}
+
+\begin{landscape}
+\centering
+
+\begin{tabular}{|
+    >{\centering\arraybackslash}m{2.2cm}|
+    >{\arraybackslash}m{7cm}|
+    >{\arraybackslash}m{7cm}|
+    >{\arraybackslash}m{7cm}|
+}
+\hline
+\rowcolor{lightgray}
+\multicolumn{4}{|c|}{\textbf{Brainwriting (Iteración 1)}} \\
+\hline
+\rowcolor{lightgray}
+\textbf{Miembro} & \textbf{Idea 1} & \textbf{Idea 2} & \textbf{Idea 3} \\
+\hline
+
+\cellcolor{lightgray!30}\textbf{Daniel} &
+Módulo de Odoo que interactúe con una API que prediga enfermedades genéticas. &
+LLM que, dado un archivo \texttt{FASTQ} y un historial clínico, detecte variantes y prediga enfermedades genéticas. &
+Aplicación para clasificar variantes genéticas. \\
+\hline
+
+\cellcolor{lightgray!30}\textbf{Francisco} &
+Procesamiento automático de archivos \texttt{FASTQ} para encontrar variantes genéticas mediante una aplicación web que permita la subida de dichos archivos. &
+Consulta de diversas fuentes de datos a través de APIs para informar al genetista sobre las variantes detectadas. &
+Entrenamiento de un modelo predictivo que utilice variantes seleccionadas por el genetista y datos clínicos del paciente, mostrando una predicción explicada en la interfaz de usuario. \\
+\hline
+
+\cellcolor{lightgray!30}\textbf{Jaime} &
+Análisis automático de archivos \texttt{FASTQ}: sistema que analiza automáticamente archivos \texttt{FASTQ} y detecta variantes genómicas sin intervención manual. &
+Predicción de enfermedades con \textit{Machine Learning}: modelo que predice enfermedades hereditarias a partir de variantes genómicas y bases de datos médicas. &
+Integración de historial clínico y familiar: módulo que incorpora el historial clínico y familiar del paciente en la predicción de enfermedades. \\
+\hline
+
+\cellcolor{lightgray!30}\textbf{Nicolás} &
+Aportar un modelo que, tras analizar archivos genómicos, devuelva el nombre de la enfermedad, un porcentaje de probabilidad de acierto y gráficas explicativas que ayuden al genetista a interpretar el resultado. &
+Aplicación web que analiza automáticamente las principales diferencias entre archivos genómicos y, mediante llamadas a distintas APIs, identifica la enfermedad asociada. &
+Solución compuesta por dos scripts: uno encargado de analizar los archivos y obtener las diferencias, y otro que consulta distintas fuentes para identificar la enfermedad asociada. \\
+\hline
+
+\end{tabular}
+
+\captionof{table}{Brainwriting (Iteración 1).}
+\label{tab:brainwriting_iter1}
+\end{landscape}

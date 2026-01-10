@@ -1,0 +1,32 @@
+\chapter*{Anexo 1: Historias de usuario}
+\addcontentsline{toc}{chapter}{Anexo 1: Historias de usuario}
+\markboth{Anexo 1: Historias de usuario}{}
+\label{anexo:historias_usuario}
+\setcounter{chapter}{1}
+\renewcommand{\thechapter}{A}
+
+En este anexo se recogen las \textbf{historias de usuario} definidas durante el desarrollo del proyecto. Las historias de usuario permiten describir, de forma sencilla y centrada en el usuario final, las necesidades y funcionalidades que el sistema debe cubrir.
+
+Todas las historias se han formulado siguiendo la estructura habitual:
+
+\begin{quote}
+\textit{«Como… (usuario), quiero… (objetivo), de modo que… (beneficio)».}
+\end{quote}
+
+En este proyecto, el usuario principal identificado es el \textbf{genetista}, ya que es el perfil que interactuará directamente con el sistema propuesto y tomará decisiones clínicas apoyándose en los resultados obtenidos.
+
+Las historias de usuario definidas son las siguientes:
+
+\begin{itemize}
+    \item \textit{Como} genetista \textit{quiero} subir ficheros \texttt{FASTQ} \textit{de modo que} se puedan detectar las variantes genómicas de forma automática.
+    
+    \item \textit{Como} genetista \textit{quiero} que las predicciones realizadas por el sistema sean fiables, \textit{de modo que} me proporcionen un nivel mínimo de confianza al utilizarlas como apoyo para el diagnóstico de enfermedades.
+    
+    \item \textit{Como} genetista \textit{quiero} poder subir historiales clínicos de los pacientes, \textit{de modo que} esta información pueda tenerse en cuenta a la hora de realizar las predicciones sobre enfermedades genéticas.
+    
+    \item \textit{Como} genetista \textit{quiero} conocer las posibles enfermedades relacionadas con las variantes detectadas en el fichero \texttt{FASTQ} del paciente, \textit{de modo que} pueda acceder directamente a las fuentes médicas asociadas, como por ejemplo ClinVar.
+    
+    \item \textit{Como} genetista \textit{quiero} poder proporcionar feedback sobre los resultados predichos, \textit{de modo que} pueda comprender por qué el modelo ha generado determinadas explicaciones y, además, contribuir a la detección y reporte de posibles errores.
+    
+    \item \textit{Como} genetista \textit{quiero} que el sistema esté integrado en el software de la clínica, \textit{de modo que} se pueda utilizar dentro de Odoo y no sea necesario cambiar de programa o entorno de trabajo.
+\end{itemize}

@@ -1,0 +1,59 @@
+\documentclass[12pt]{report}
+
+% Paquetes LaTeX y estilos globales
+\input{etc/pkgs}
+\input{etc/style}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Variables para la portada
+\setTitle{Memoria Design Thinking}
+\setAuthor{Francisco Sebatián Benítez Ruis Díaz \\ Daniel Galván Cancio \\ Nicolás Herrera Lobo \\ Jaime Linares Barrera \\ }
+\setSubject{Gestión de Productos}
+\setDegree{Máster en Ingeniería del Software: Cloud, Datos y Gestión de las Tecnologías de la Información}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Comienzo del documento
+\begin{document}
+
+    % Portada y secciones no numeradas
+    \input{sections/00_Portada}
+    \input{sections/00_Resumen}
+    \input{sections/00_Abstract}
+    
+    % Índice del documento y de figuras
+    \begingroup
+        % Los enlaces son normalmente azules, pero en los índices se configuran a negro para que no aparezca todo azul
+        \hypersetup{linkcolor=black}
+        \tableofcontents
+        \listoffigures
+        \listoftables
+    \endgroup
+    
+    % Cambia el estilo de números de página de romanos a normal
+    \clearpage\pagenumbering{arabic}
+    
+    % Capítulos del trabajo
+    \input{sections/01_Introduccion}
+    \input{sections/02_Empatia}
+    \input{sections/03_Definir}
+    \input{sections/04_Idear}
+    \input{sections/05_Prototipar}
+    \input{sections/06_Testear}
+    \input{sections/07_Conclusiones}
+
+    % Bibliografía
+    % ---------------------------------------------------
+    \bibliographystyle{unsrtnat}
+    \bibliography{bibliografia.bib}
+
+    % Anexos
+    % ---------------------------------------------------
+    \appendix
+    \input{sections/Anexo1_Historias_de_usuario}
+    \input{sections/Anexo2_Uso_de_la_IA} 
+        
+
+% Fin del documento
+\end{document}

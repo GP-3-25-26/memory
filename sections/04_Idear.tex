@@ -1,0 +1,130 @@
+\chapter{Fase 3: Idear}\label{cap:idear}
+
+En este capítulo se aborda la tercera fase de la metodología Design Thinking, la fase de \textbf{Idear}. El objetivo principal de esta etapa es generar, explorar y refinar distintas propuestas de solución al problema definido en la fase anterior, fomentando la creatividad y la exploración de alternativas.
+
+Para ello, se han seleccionado técnicas que permiten generar ideas de forma estructurada, compararlas entre sí y mejorar progresivamente la solución escogida. En los siguientes apartados se describen las técnicas utilizadas y su justificación, así como la aplicación práctica de cada una de ellas y los resultados obtenidos.
+
+\section{Técnicas utilizadas}
+
+En la fase de Idear se realizó una selección de técnicas orientadas a la generación y mejora de soluciones. A continuación, se detallan las técnicas seleccionadas y aquellas que se descartaron, junto con la justificación correspondiente:
+
+\begin{itemize}
+    \item \textbf{Brainstorming.} A pesar de ser una técnica ampliamente utilizada, se decidió no aplicarla ya que el brainwriting permite generar un mayor número de ideas de forma más gestionable al tratarse de un proceso mecánico y metódico, sin necesidad de moderador.
+    \item \textbf{Brainwriting.} Se selecciona esta técnica para definir varias soluciones de manera estructurada. Al ser un proceso mecánico, resulta más sencillo que el brainstorming y no requiere la presencia de un moderador.
+    \item \textbf{Mapa mental.} Se utiliza nuevamente esta técnica, aunque en este caso se elaboran varios mapas mentales, cada uno representando una solución diferente. Posteriormente, se comparan las propuestas para seleccionar la más adecuada.
+    \item \textbf{SCAMPER.} Esta técnica se emplea para reflexionar sobre posibles modificaciones de la solución seleccionada tras el uso de los mapas mentales, con el objetivo de mejorarla si se considera necesario.
+    \item \textbf{DaVinci.} Se decide no aplicar esta técnica debido a que ya se dispone de suficiente información y el ámbito del problema está claramente delimitado.
+    \item \textbf{Infografía.} Se utiliza, al igual que en fases anteriores, para resumir los resultados obtenidos y condensar la información más relevante en una única imagen.
+\end{itemize}
+
+\section{Aplicación de las técnicas}
+
+Las técnicas seleccionadas se aplicaron de forma secuencial, permitiendo generar ideas, evaluarlas y refinarlas progresivamente hasta obtener una solución final.
+
+\subsection{Brainwriting}
+
+Para la aplicación de la técnica de brainwriting se contó con la participación de los cuatro miembros del equipo. Se plantearon cuatro iteraciones, lo que permitió obtener un conjunto amplio de ideas progresivamente mejoradas.
+
+Cada miembro aportó tres ideas iniciales en la primera iteración. En las iteraciones posteriores, los miembros del grupo pudieron mejorar y retocar las ideas propuestas por otros, de modo que se produjera una retroalimentación continua y se alcanzaran resultados de mayor calidad. Cada iteración tuvo una duración de cinco minutos.
+
+Las columnas de las tablas generadas durante el proceso tienen el siguiente significado: la columna \textit{Miembro} identifica a la persona que propone la idea inicial; las columnas \textit{Idea X}, siendo X un número del 1 al 3, recogen las distintas ideas planteadas o modificadas en cada iteración. En las iteraciones posteriores a la primera, se indica quién realizó cada modificación, manteniendo la trazabilidad del proceso mediante guiones que reflejan el orden y autoría de los cambios.
+
+El objetivo principal del brainwriting fue buscar inspiración y generar ideas. Dado que participaron cuatro miembros, se realizaron cuatro rondas y cada miembro propuso tres ideas, se obtuvo un total de $3 \times 4 \times 3 = 36$ ideas.
+
+\input{tables/brainwriting_it1}
+
+\input{tables/brainwriting_it2}
+
+\input{tables/brainwriting_it3}
+
+\input{tables/brainwriting_it4}
+
+Tras finalizar las iteraciones, se seleccionaron las cuatro ideas más relevantes, una por cada miembro del equipo:
+
+\begin{itemize}
+    \item \textbf{Idea 1:} Modelo basado en LLM y agentes autónomos que, a partir de un conjunto de variantes genómicas y del historial clínico del paciente, predice posibles enfermedades genéticas, proporcionando un porcentaje de probabilidad y una explicación comprensible de los factores que han influido en la predicción, como apoyo a la decisión del genetista.
+    \item \textbf{Idea 2:} Entrenamiento de un modelo predictivo que utiliza como entrada las variantes genéticas seleccionadas por el genetista a partir de un análisis automático del archivo \texttt{FASTQ}, junto con datos clínicos del paciente. El sistema genera una predicción explicada, mostrando los resultados y el razonamiento del modelo en una interfaz visual basada en un archivo HTML.
+    \item \textbf{Idea 3:} Integración del historial clínico y familiar del paciente en la predicción de enfermedades, permitiendo identificar la raíz de la enfermedad. El sistema puede recomendar pruebas adicionales cuando la predicción es positiva e incorpora explicabilidad para su valoración por parte del genetista.
+    \item \textbf{Idea 4:} Aplicación web que analiza automáticamente las principales diferencias entre los archivos genómicos del paciente y el genoma de referencia, consultando APIs y bases de datos médicas para asociar variantes con posibles enfermedades e incorporando un sistema de feedback para el genetista.
+\end{itemize}
+
+\subsection{Mapa mental}
+
+Una vez generadas suficientes ideas mediante la técnica de brainwriting, se procedió a plantear distintas soluciones utilizando mapas mentales. Inicialmente se consideraron cuatro soluciones, una por cada miembro del equipo. No obstante, se observó que la idea correspondiente a la integración del historial clínico y familiar podía incorporarse al resto de propuestas.
+
+Por este motivo, se decidió elaborar tres mapas mentales conjuntos, cada uno representando una de las soluciones finales a debatir. El objetivo fue comparar las propuestas y seleccionar la más adecuada, que posteriormente sería refinada mediante la técnica SCAMPER.
+
+Todos los mapas mentales elaborados comparten una estructura común. En el lado izquierdo se recogen los elementos necesarios para el funcionamiento del sistema, mientras que en el lado derecho se representan los servicios y funcionalidades ofrecidos a los usuarios. Los nodos relacionados con los datos necesarios para el sistema se representan en color azul, incluyendo el archivo \texttt{FASTQ} del paciente perfecto, las bases de datos de variantes genómicas y la información sobre enfermedades hereditarias obtenida de fuentes externas como ClinVar.
+
+\newpage
+Las soluciones planteadas fueron las siguientes:
+
+\begin{itemize}
+    \item \textbf{Solución 1:} combinación de la Idea 1 y la Idea 3.
+    
+    \begin{figure}[H]
+        \centering
+        \captionsetup{justification=centering}
+        \includegraphics[width=1\textwidth]{figures/idear/mapa_mental_solucion_1.jpg}
+        \caption{Idear: Mapa mental solución 1 (idea 1 + idea 3).}
+    \end{figure}
+    
+    \item \textbf{Solución 2:} combinación de la Idea 2 y la Idea 3.
+
+    \begin{figure}[H]
+        \centering
+        \captionsetup{justification=centering}
+        \includegraphics[width=1\textwidth]{figures/idear/mapa_mental_solucion_2.jpg}
+        \caption{Idear: Mapa mental solución 2 (idea 2 + idea 3).}
+    \end{figure}
+    
+    \item \textbf{Solución 3:} combinación de la Idea 4 y la Idea 3.
+
+    \begin{figure}[H]
+        \centering
+        \captionsetup{justification=centering}
+        \includegraphics[width=1\textwidth]{figures/idear/mapa_mental_solucion_3.jpg}
+        \caption{Idear: Mapa mental solución 3 (idea 4 + idea 3).}
+    \end{figure}
+\end{itemize}
+
+Tras analizar las tres propuestas, se decidió seleccionar la \textbf{Solución 1}, al considerarse la más completa, actual y cómoda para la interacción por parte de los usuarios.
+
+\subsection{SCAMPER}
+
+Una vez seleccionada la solución final y modelada mediante mapas mentales, se aplicó la técnica SCAMPER con el objetivo de analizar la propuesta desde distintos puntos de vista y explorar posibles mejoras.
+
+\begin{itemize}
+    \item \textbf{S (Sustituir).} \textit{¿Qué puede ser sustituido en nuestro producto para mejorarlo?} Se plantea sustituir el desarrollo de una aplicación web independiente por un módulo integrado en Odoo \cite{odoo}, evitando crear una plataforma desde cero para la gestión de pacientes y archivos.
+    \item \textbf{C (Combinar).} \textit{¿Qué otro producto/servicio/proceso puede ser combinado con el nuestro para crear algo diferente y novedoso para el mercado?} Se propone combinar Odoo, que proporciona un entorno de interfaz sólido, con modelos de lenguaje preentrenados como Llama, Gemini, DeepSeek R1 o GPT-4.5.
+    \item \textbf{A (Adaptar).} \textit{¿Qué puede ser adaptado de otro producto/servicio/proceso que suponga una mejora en el nuestro?} Se sugiere adaptar la interfaz de chat de los LLM para permitir que el genetista interactúe de forma conversacional con el historial clínico y las bases de datos de variantes.
+    \item \textbf{M (Modificar).} \textit{¿Qué elementos de nuestro producto pueden ser  modificados para mejorar su posicionamiento en el mercado?} Se propone modificar el flujo del sistema para incluir un mecanismo de retroalimentación, permitiendo al genetista aportar comentarios sobre las predicciones y mejorando el sistema con el uso.
+    \item \textbf{P (Proponer).} \textit{¿Nuestro producto puede ser utilizado en otro contexto diferente a aquel para el que fue creado?} Se considera que, dado el carácter específico de la solución, no es viable su aplicación en otros contextos, salvo como repositorio de datos médicos normalizados.
+    \item \textbf{E (Eliminar).} \textit{¿Existe alguna función que pueda ser eliminada o reducida al mínimo?} Se plantea reducir al mínimo funcionalidades como la autenticación o el diseño del frontend, delegando estas tareas en un módulo de Odoo conectado al backend.
+    \item \textbf{R (Reordenar).} \textit{¿Se puede reordenar la secuencia de  instrucciones de manejo de nuestro producto de tal forma que facilite su uso?} Se evalúa la posibilidad de reordenar el flujo de uso, concluyendo que no tendría un impacto significativo en la mejora del sistema.
+\end{itemize}
+
+\subsection{Mapa mental: Solución planteada}
+
+Tras la aplicación de la técnica SCAMPER, se realizaron ajustes sobre el mapa mental correspondiente a la solución seleccionada, obteniendo el mapa mental definitivo que representa la idea que será prototipada en la siguiente fase.
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=1\textwidth]{figures/idear/mapa_mental_solucion_definitiva.jpg}
+    \caption{Idear: Mapa mental solución planteada.}
+\end{figure}
+
+Las principales modificaciones introducidas fueron la definición del frontend como un módulo integrado en Odoo y la incorporación de un sistema de feedback que permite al genetista añadir comentarios cuando una predicción lo requiera.
+
+\subsection{Infografía}
+
+Finalmente, se volvió a hacer uso de \textbf{IA generativa} para elaborar una infografía que resume visualmente todo lo trabajado durante la fase de Idear, condensando las ideas, decisiones y resultados obtenidos en esta etapa.
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=1\textwidth]{figures/idear/infografia.png}
+    \caption{Idear: Infografía.}
+\end{figure}
+

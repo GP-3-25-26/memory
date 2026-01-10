@@ -1,0 +1,108 @@
+\chapter{Fase 1: Empatía}\label{cap:empatia}
+
+En este capítulo se aborda la primera fase de la metodología Design Thinking, la fase de \textbf{Empatía}. El objetivo principal de esta fase es comprender el contexto del problema, así como identificar las dificultades, limitaciones y necesidades existentes en el proceso actual objeto de estudio.
+
+Para ello, se han seleccionado y aplicado distintas técnicas que permiten analizar el problema desde diferentes perspectivas, facilitando una comprensión más profunda del mismo. En los siguientes apartados se describen, en primer lugar, las técnicas utilizadas y la justificación de su selección y, posteriormente, la aplicación práctica de cada una de ellas y los resultados obtenidos.
+
+\section{Técnicas utilizadas}
+
+En la fase de Empatía se realizó una selección de técnicas con el objetivo de comprender el problema de manera estructurada y visual, así como de profundizar en sus causas principales. Las técnicas seleccionadas, junto con aquellas que se descartaron, se detallan a continuación:
+
+\begin{itemize}
+    \item \textbf{Los 5 por qués.} Esta técnica se aplica debido a su utilidad para plantear cuestiones clave que permiten generar respuestas y reflexiones profundas en torno al problema, ayudando a identificar sus causas raíz.
+    \item \textbf{Mapa mental.} Esta técnica se utiliza para representar el problema de forma visual, incluyendo conceptos relevantes del contexto, ideas sueltas y aquellos aspectos que inicialmente no se comprenden con claridad.
+    \item \textbf{Infografía.} Esta técnica se emplea para resumir de forma visual las conclusiones obtenidas tras la aplicación del mapa mental y de los 5 por qués. Su uso permite comprender la información de manera rápida, facilitar su recuerdo en fases posteriores y aclarar ideas. Además, se reutiliza en otras fases del proyecto para disponer siempre de un resumen visual de los resultados obtenidos.
+    \item \textbf{Observación de usuarios.} Esta técnica no se aplica debido a que no es viable realizar una observación directa del entorno de trabajo de los usuarios, ya que no es posible acceder a la empresa.
+    \item \textbf{Mapa de empatía.} Tampoco se aplica esta técnica debido a la falta de conocimiento suficiente sobre la situación real de la empresa, lo que impide desarrollarla de forma adecuada.
+\end{itemize}
+
+\section{Aplicación de las técnicas}
+
+Las técnicas seleccionadas se ejecutaron de manera secuencial con el fin de ir refinando progresivamente la comprensión del problema. El orden de aplicación fue el siguiente: mapa mental inicial, técnica de los 5 por qués, modificación y mejora del mapa mental y, finalmente, elaboración de la infografía.
+
+\subsection{Mapa mental (inicial)}
+
+Inicialmente, a partir del contexto aportado y de los conocimientos previos del equipo, se elaboró un mapa mental con el objetivo de representar de forma visual los conceptos relacionados con el problema central: \textbf{la detección de patologías genéticas}.
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=1\textwidth]{figures/empatia/mapa_mental_inicial.jpg}
+    \caption{Empatía: Mapa mental inicial.}
+\end{figure}
+
+En el lado izquierdo del mapa mental se agrupan distintos conceptos que se unifican en dicho objetivo común. Entre ellos se encuentran:
+
+\begin{itemize}
+    \item \textbf{Secuenciación genética del paciente:} se identifica como uno de los principales problemas a resolver. Este concepto y sus subconceptos se representan en color amarillo para facilitar la identificación de su relación. Incluye tanto las características del proceso actual como las principales dificultades encontradas, como la necesidad de comparar manualmente archivos \texttt{FASTQ} con un paciente perfecto para detectar incongruencias, lo que conlleva un riesgo elevado de errores. A esto se suma la escasez de genetistas disponibles para realizar este análisis.
+    \item \textbf{Tratamiento de datos:} representado en color rosa, agrupa los conceptos relacionados con la normalización y transformación de los datos. Además, se destaca la necesidad de contrastar estos datos con sistemas de información externos que determinan si una variante es benigna o maligna y sus posibles consecuencias.
+\end{itemize}
+
+\newpage
+En el lado derecho del mapa mental se identifican cuatro conceptos principales:
+
+\begin{itemize}
+    \item \textbf{Bases de datos patológicas:} representadas en color azul, corresponden a las bases de datos utilizadas por los genetistas para conocer los efectos de las variantes detectadas tras la comparación del archivo \texttt{FASTQ} del paciente con el paciente perfecto (por ejemplo, ClinVar). Incluyen el subconcepto \textit{Enfermedades hereditarias}.
+    \item \textbf{Pruebas médicas:} representadas en color morado, hacen referencia a las pruebas específicas a las que se somete el paciente para confirmar la presencia de una enfermedad.
+    \item \textbf{Histórico clínico de pacientes:} representado en color naranja, se refiere al conjunto de datos clínicos del paciente, relevantes para el diagnóstico. Incluye el subconcepto \textit{Historial clínico familiar}, fundamental para la detección de enfermedades hereditarias.
+    \item \textbf{Machine Learning:} representado en color verde, se identifica como la técnica de ciencia de datos que podría utilizarse para ofrecer predicciones que sirvan de apoyo a la decisión del profesional médico. Incluye el subconcepto \textit{Supervisión humana}, que refleja la necesidad de que la decisión final sea tomada por un humano.
+\end{itemize}
+
+\subsection{Los 5 por qués}
+
+Para aplicar la técnica de los 5 por qués, se partió de un contexto previo que recogía toda la información conocida hasta el momento y se planteó una situación concreta.
+
+\textbf{Contexto previo:} los archivos \texttt{FASTQ} contienen la información genómica de los pacientes. El proceso para determinar si un paciente es propenso a desarrollar una enfermedad se realiza de forma manual, comparando la cadena de nucleótidos del paciente con la de un paciente perfecto. Cuando se detectan diferencias, estas deben registrarse y consultarse posteriormente en bases de datos médicas de variantes genómicas. Actualmente no existe un modo automático de realizar esta comparativa ni de buscar información sobre las variantes de forma simultánea. Además, no se dispone del historial clínico ni familiar de los pacientes de manera automática.
+
+La frase que da comienzo a las preguntas es la siguiente:
+
+\begin{quote}
+«Imaginemos que estamos ayudando a un genetista al que le acaba de llegar un archivo \texttt{FASTQ} de un paciente y debemos determinar si es probable que desarrolle alguna enfermedad, por ejemplo, ceguera.»
+\end{quote}
+
+A partir de esta contextualización, se formularon las siguientes preguntas:
+
+\begin{itemize}
+    \item \textbf{¿Por qué quieres automatizar el proceso de detección de enfermedades a largo plazo?} Porque se busca reducir a cero el error humano en la detección de variantes y agilizar el proceso, ya que existen pocos genetistas y el análisis actual es lento.
+    \item \textbf{¿Por qué es lento dicho análisis?} Porque el genoma del paciente se almacena en un archivo \texttt{FASTQ} que debe compararse manualmente con el genoma de un paciente perfecto para encontrar e interpretar las variantes.
+    \item \textbf{¿Por qué hay tantos errores en el proceso de detección de variantes?} Porque existen muchas variantes, tanto benignas como malignas, la secuencia de nucleótidos es muy extensa y su interpretación resulta compleja.
+    \item \textbf{¿Por qué resulta tan difícil la interpretación de las variantes?} Porque la información se encuentra distribuida en distintos repositorios médicos y algunas variantes pueden ser interdependientes, además de influir factores como el historial del paciente.
+    \item \textbf{¿Por qué no se tiene en cuenta información adicional a la de los repositorios médicos?} Porque hacerlo aumentaría el tiempo de análisis, la complejidad del proceso y el margen de error humano.
+\end{itemize}
+
+\subsection{Mejoras del mapa mental inicial}
+
+Tras la aplicación de la técnica de los 5 por qués, se añadieron nuevos conceptos al mapa mental inicial con el objetivo de clarificar y reforzar los aspectos más relevantes del problema.
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=1\textwidth]{figures/empatia/mapa_mental_mejorado.jpg}
+    \caption{Empatía: Mapa mental inicial mejorado tras aplicar los 5 por qués.}
+\end{figure}
+
+Los nuevos conceptos incorporados fueron los siguientes:
+
+\begin{itemize}
+    \item \textbf{Análisis lento y complejo:} se identifica como un factor clave, destacando que cualquier mejora que agilice el proceso es bienvenida.
+    \item \textbf{Secuencia de nucleótidos:} cada fila de un archivo \texttt{FASTQ} se compone de secuencias de nucleótidos.
+    \item \textbf{Error humano:} se reconoce como el principal problema a resolver, con la necesidad de reducirlo al mínimo.
+    \item \textbf{Detección de variantes genómicas:} fase en la que el genetista identifica las diferencias entre la secuencia del paciente y la del paciente perfecto.
+    \item \textbf{Base de datos ClinVar:} identificada como la base de datos de variantes genómicas más grande y utilizada.
+    \item \textbf{Análisis automático del fichero:} se considera clave automatizar la detección de variantes y la identificación de su carácter benigno o maligno.
+    \item \textbf{Predicción:} engloba el uso de técnicas de machine learning para predecir enfermedades, así como la explicación del resultado obtenido.
+    \item \textbf{Explicabilidad:} se destaca la necesidad de conocer por qué el sistema llega a una determinada predicción, permitiendo su revisión y validación por parte de un profesional.
+\end{itemize}
+
+\subsection{Infografía}
+
+Para la elaboración de la infografía se decidió utilizar \textbf{IA generativa} con el objetivo de resumir de forma visual todo lo desarrollado durante esta fase. Para ello, se diseñó un prompt y se utilizó la herramienta NotebookLM, que generó una imagen como resultado.
+
+Dicha imagen fue posteriormente verificada para comprobar que recogía los aspectos más relevantes de la fase de Empatía. Tras su validación por parte del equipo, se adoptó como la infografía final de esta fase. Para más detalles sobre el uso de estas herramientas, se recomienda consultar el \nameref{anexo:uso_IA}.
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=1\textwidth]{figures/empatia/infografia.png}
+    \caption{Empatía: Infografía.}
+\end{figure}

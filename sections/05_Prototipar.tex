@@ -1,0 +1,86 @@
+\chapter{Fase 4: Prototipar}\label{cap:prototipar}
+
+En este capítulo se aborda la cuarta fase de la metodología Design Thinking, la fase de \textbf{Prototipar}. El objetivo principal de esta etapa es materializar la solución seleccionada en la fase de Idear mediante representaciones tangibles que permitan validar el enfoque propuesto y facilitar su evaluación en fases posteriores.
+
+Para ello, se han seleccionado distintas técnicas que permiten definir el alcance de la solución, construir un prototipo funcional básico y representar de forma visual los procesos que no se implementan directamente en el prototipo. En los siguientes apartados se describen las técnicas utilizadas, su justificación y la aplicación práctica de cada una de ellas.
+
+\section{Técnicas utilizadas}
+
+En la fase de Prototipar se seleccionaron técnicas orientadas a representar la solución de manera clara, tanto a nivel conceptual como funcional. A continuación, se detallan las técnicas empleadas y la motivación de su uso:
+
+\begin{itemize}
+    \item \textbf{Canvas.} Esta técnica se aplica para comprender a grandes rasgos la solución planteada, identificando los elementos clave del producto y definiendo qué aspectos se cubrirán en el prototipo.
+    \item \textbf{Prototype.} Se utiliza esta técnica para crear un prototipo funcional básico que represente la solución propuesta y permita validar sus principales funcionalidades.
+    \item \textbf{Storyboard.} Esta técnica se emplea para representar las historias de usuario asociadas a los procesos del backend, los cuales no se prototipan de forma directa.
+\end{itemize}
+
+\section{Aplicación de las técnicas}
+
+Las técnicas seleccionadas se aplicaron de forma secuencial, comenzando por una definición conceptual de la solución, seguida de la construcción del prototipo y, finalmente, la representación visual de los procesos no implementados.
+
+\subsection{Canvas}
+
+Como primer paso, se elaboró un \textbf{Canvas} que representara de forma global la solución propuesta. Para su realización, se tomó como referencia la plantilla de Miro denominada \textit{“Estrategia de lanzamiento al mercado: Lienzo”}, desarrollada por Three Five Two \cite{miro_canvas_threefivetwo}, la cual fue adaptada para ajustarse a las necesidades específicas del proyecto.
+
+Este canvas permitió identificar de manera estructurada los componentes principales de la aplicación, el valor aportado a los usuarios, los recursos necesarios y el alcance del prototipo que se desarrollaría en esta fase.
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=1\textwidth]{figures/prototipar/canvas.jpg}
+    \caption{Prototipar: Canvas.}
+\end{figure}
+
+\subsection{Prototype}
+
+Para el desarrollo del prototipo se decidió utilizar \textbf{React} \cite{react} con el objetivo de construir una aplicación básica que permitiera visualizar y validar las principales funcionalidades de la solución.
+
+La elección de React se justifica por dos motivos principales. En primer lugar, el equipo no dispone de experiencia previa en la extensión de Odoo, y el objetivo de esta fase es únicamente validar la idea, no desarrollar un producto final. En segundo lugar, React es el framework con el que el equipo tiene mayor experiencia, lo que permite una mayor rapidez y eficiencia en el proceso de prototipado.
+
+Cabe destacar que el \textbf{backend no se prototipa} en esta fase. En su lugar, se utilizan datos \textit{mock} para simular el comportamiento del sistema y centrar el esfuerzo en la validación de la experiencia de usuario y las funcionalidades principales.
+
+El prototipo desarrollado incluye las siguientes pantallas y funcionalidades:
+
+\begin{itemize}
+    \item Pantalla de carga de archivos \texttt{FASTQ} y selección de los datos del paciente.
+    \item Pantalla de procesamiento del archivo \texttt{FASTQ} para la detección de variantes genómicas.
+    \item Pantalla de listado de variantes detectadas junto con información sobre enfermedades genéticas asociadas. Esta pantalla incluye un apartado de chat con un LLM que permite al genetista realizar consultas sobre las variantes, así como un botón para iniciar la predicción de enfermedades genéticas.
+    \item Pantalla de predicción, en la que se muestran las principales enfermedades genéticas que el modelo de \textit{Machine Learning} considera probables para el paciente. Incluye también un apartado de chat con un LLM para realizar consultas sobre la predicción.
+    \item Pantalla final del proceso, en la que el genetista puede aportar comentarios y feedback sobre la predicción obtenida.
+\end{itemize}
+
+El resultado del prototipado puede consultarse en el siguiente repositorio de GitHub:
+
+\begin{center}
+\url{https://github.com/GP-3-25-26/prototipo-gp}
+\end{center}
+
+\subsection{Storyboard}
+
+Para la elaboración de los \textbf{storyboards}, se partió de las historias de usuario definidas en el \nameref{anexo:historias_usuario}, las cuales describen los procesos asociados al backend del sistema. Estos procesos no se implementan directamente en el prototipo, pero resultan fundamentales para comprender el funcionamiento global de la solución.
+
+Las historias de usuario se redactaron siguiendo una plantilla estándar obtenida de Agile Alliance \cite{agile_user_story_template} y traducida al español, con la siguiente estructura:
+
+\begin{quote}
+\textit{«Como… (el usuario que quiere conseguir algo) quiero… (lo que quiere conseguir) de modo que… (para qué lo quiere conseguir)».}
+\end{quote}
+
+\newpage
+Una vez definidas las historias de usuario, se utilizaron las herramientas \textbf{NotebookLM} y \textbf{Gemini} para generar los storyboards, solicitando la creación de imágenes representativas que ilustraran visualmente cada uno de los procesos descritos.
+
+A continuación, se presentan los storyboards obtenidos a partir de este proceso:
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=1\textwidth]{figures/prototipar/storyboard_1.png}
+    \caption{Prototipar: Storyboard (1).}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=1\textwidth]{figures/prototipar/storyboard_2.png}
+    \caption{Prototipar: Storyboard (2).}
+\end{figure}
+

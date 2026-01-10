@@ -1,0 +1,4 @@
+pdflatex GP_DesignThinking.tex
+bibtex GP_DesignThinking
+pdflatex GP_DesignThinking.tex
+pdflatex GP_DesignThinking.tex
