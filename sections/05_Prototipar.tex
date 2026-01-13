@@ -55,6 +55,61 @@ El resultado del prototipado puede consultarse en el siguiente repositorio de Gi
 \url{https://github.com/GP-3-25-26/prototipo-gp}
 \end{center}
 
+A continuación, expondremos el proceso de detección de variantes presentado en el prototipo. Primero el usuario selecciona el expediente clínico del paciente y sube el fichero .FASTQ con el código genético del mismo.
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=1\textwidth]{figures/prototipar/pantalla_prototipo1.png}
+    \caption{Prototipar: Pantalla 1.}
+\end{figure}
+
+Cuando pulsa el botón para procesar el archivo el sistema muestra una animación mientras analiza el fichero y detecta las variantes
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=1\textwidth]{figures/prototipar/pantalla_prototipo2.png}
+    \caption{Prototipar: Pantalla 2.}
+\end{figure}
+
+Cuando las encuentra, las clasifica y en la siguiente pantalla muestra los enlaces a ClinVar donde se pueden consultar.
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=1\textwidth]{figures/prototipar/pantalla_prototipo3.png}
+    \caption{Prototipar: Pantalla 3.}
+\end{figure}
+
+Además existe la opción de preguntar al LLM sobre los resultados obtenidos
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=1\textwidth]{figures/prototipar/pantalla_prototipo4.png}
+    \caption{Prototipar: Pantalla 4.}
+\end{figure}
+
+Si consideramos que está todo en orden, pasamos al diagnóstico, en la siguiente pantalla. Nuevamente tenemos la opción de preguntar a la IA sobre las decisiones que ha tomado y las conclusiones obtenidas.
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=1\textwidth]{figures/prototipar/pantalla_prototipo5.png}
+    \caption{Prototipar: Pantalla 5.}
+\end{figure}
+
+Si todo está en orden, podemos validar el diagnóstico o rechazarlo, y enviar feedback sobre la predicción.
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=1\textwidth]{figures/prototipar/pantalla_prototipo6.png}
+    \caption{Prototipar: Pantalla 6.}
+\end{figure}
+
+
 \subsection{Storyboard}
 
 Para la elaboración de los \textbf{storyboards}, se partió de las historias de usuario definidas en el \nameref{anexo:historias_usuario}, las cuales describen los procesos asociados al backend del sistema. Estos procesos no se implementan directamente en el prototipo, pero resultan fundamentales para comprender el funcionamiento global de la solución.
